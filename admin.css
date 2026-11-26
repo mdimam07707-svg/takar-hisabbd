@@ -1,0 +1,44 @@
+:root{--bg:#0b0c10;--card:#14161c;--line:#242732;--text:#eceef3;--muted:#8b90a0;--accent:#c4f135;--danger:#ff5d73;--ok:#3ddc97}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font:15px/1.6 "Hind Siliguri","Segoe UI",system-ui,sans-serif}
+a{color:var(--accent);text-decoration:none}
+.wrap{display:flex;min-height:100vh}
+.side{width:230px;background:var(--card);border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}
+.brand{font-weight:700;font-size:18px;margin:0 8px 14px}
+.brand span{color:var(--accent)}
+.side a.nav{display:block;padding:9px 12px;border-radius:10px;color:var(--muted)}
+.side a.nav:hover{background:#1c1f27;color:var(--text)}
+.side a.nav.on{background:var(--accent);color:#111;font-weight:600}
+.side form{margin-top:auto}
+.main{flex:1;padding:28px;max-width:1000px}
+h1{font-size:24px;margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{margin:0 0 6px;font-size:13px;color:var(--muted);font-weight:500}
+.card .big{font-size:26px;font-weight:700}
+label{display:block;margin:14px 0 6px;color:var(--muted);font-size:13px}
+input[type=text],input[type=password],input[type=number],textarea{width:100%;background:#0f1116;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:0}
+textarea{min-height:80px;resize:vertical}
+.check{display:flex;align-items:center;gap:10px;margin:14px 0;color:var(--text)}
+.check input{width:18px;height:18px;accent-color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#111;border:0;border-radius:10px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn.danger{background:var(--danger);color:#fff}
+.btn.sm{padding:5px 10px;font-size:13px}
+.flash{padding:12px 14px;border-radius:10px;margin-bottom:18px;border:1px solid var(--line)}
+.flash.ok{background:rgba(61,220,151,.1);border-color:var(--ok);color:var(--ok)}
+.flash.err{background:rgba(255,93,115,.1);border-color:var(--danger);color:var(--danger)}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);font-size:14px}
+th{color:var(--muted);font-weight:500}
+.tbl{overflow-x:auto}
+code,.mono{font-family:"JetBrains Mono",Consolas,monospace;font-size:13px;word-break:break-all}
+.hint{color:var(--muted);font-size:13px;margin-top:6px}
+.login{max-width:380px;margin:12vh auto;padding:0 16px}
+.badge{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12px;background:#1c1f27}
+.badge.on{background:rgba(61,220,151,.15);color:var(--ok)}
+.badge.warn{background:rgba(255,93,115,.15);color:var(--danger)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+@media(max-width:760px){.wrap{flex-direction:column}.side{width:100%;height:auto;position:static;flex-direction:row;flex-wrap:wrap;align-items:center}.brand{width:100%}.side form{margin:0 0 0 auto}.main{padding:18px}}
